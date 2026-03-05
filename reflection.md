@@ -98,14 +98,31 @@ Yes, AI helped me understand how the tests were supposed to work. Copilot sugges
 ## 4. What did you learn about Streamlit and state?
 
 - In your own words, explain why the secret number kept changing in the original app.
+Answer
+The secret number kept changing in the original app because Streamlit reruns the entire script every time the user interacts with the page. Each rerun caused the secret number to be regenerated, so the game never kept the same value between guesses.
+
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+Answer
+Streamlit “reruns” mean that whenever a user clicks a button or submits input, Streamlit executes the whole script from top to bottom again. Session state is used to store variables so they persist between these reruns.
+
 - What change did you make that finally gave the game a stable secret number?
+Answer
+The change that fixed the issue was keeping the secret number inside st.session_state so that it only gets created once and stays the same for the entire game session.
 
 ---
 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
+
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+Answer
+One habit I want to reuse in future projects is writing and running tests with pytest to verify that code changes actually fix the problem. Testing helped confirm that the logic in the game worked correctly after the fixes.
+
 - What is one thing you would do differently next time you work with AI on a coding task?
+Answer
+Next time I work with AI on a coding task, I would verify suggestions earlier by running tests or checking the code behavior before assuming the AI solution is correct.
+
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+Answer
+This project helped me realize that AI can be a useful debugging assistant, but its suggestions still need to be reviewed and tested carefully before applying them.
